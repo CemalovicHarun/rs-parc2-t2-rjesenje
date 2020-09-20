@@ -1,0 +1,5 @@
+private Drzava dajDrzavuIzResultSeta(ResultSet rs) throws SQLException {
+        Drzava d = new Drzava(rs.getInt(1), rs.getString(2), null);
+        d.setGlavniGrad( dajGrad(rs.getInt(3), d ));
+        return d;
+    }
